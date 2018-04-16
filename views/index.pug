@@ -2,15 +2,20 @@ html
   head
     meta(charset="utf-8")
     title "pug demo"
-    link(rel="stylesheets" href="/bootstrap/css/bootstrap.css")
+    include stylesheets.pug
   body
     h1.homeGreeting#stuff Hellooooo, Pug! <!-- this has a class of "homeGreeting" and an ID of "stuff" -->
     h2 This is the subtitle: #{subtitle}
 
+    //- run JS whenever you want
+    - let jsAnywhere = "List some names here"
+
     .names
+      h3= jsAnywhere
       ul
         each name in names
           li Hello, #{name}
+
 
     a(class="btn btn-large" href="#")
     .dropdown
@@ -24,7 +29,9 @@ html
           a(tabindex="-1" href="#") Another action
         li
           a(tabindex="-1" href="#") Something else here
+
     script(src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous")
-    script('/bootstrap/js/bootstrap.min.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', 
+    integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
