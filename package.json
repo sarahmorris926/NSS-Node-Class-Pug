@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/sarahmorris926/NSS-Node-Class-Pug#readme",
   "dependencies": {
+    "bootstrap": "^4.1.0",
     "express": "^4.16.3",
+    "jquery": "^3.3.1",
     "pug": "^2.0.3"
   }
 }

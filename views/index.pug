@@ -1,0 +1,30 @@
+html
+  head
+    meta(charset="utf-8")
+    title "pug demo"
+    link(rel="stylesheets" href="/bootstrap/css/bootstrap.css")
+  body
+    h1.homeGreeting#stuff Hellooooo, Pug! <!-- this has a class of "homeGreeting" and an ID of "stuff" -->
+    h2 This is the subtitle: #{subtitle}
+
+    .names
+      ul
+        each name in names
+          li Hello, #{name}
+
+    a(class="btn btn-large" href="#")
+    .dropdown
+      .btn.dropdown-toggle.btn-danger#dlabel( role="button" data-toggle="dropdown" href="#")
+        | Dropdown stuff in here
+        .caret.dropdown-caret
+      ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
+        li
+          a(tabindex="-1" href="#") Action
+        li
+          a(tabindex="-1" href="#") Another action
+        li
+          a(tabindex="-1" href="#") Something else here
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous")
+    script('/bootstrap/js/bootstrap.min.js')
