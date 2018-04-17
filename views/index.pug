@@ -15,6 +15,7 @@ html
       ul
         each name in names
           li Hello, #{name}
+            button.deleteName delete
 
 
     a(class="btn btn-large" href="#")
@@ -30,8 +31,12 @@ html
         li
           a(tabindex="-1" href="#") Something else here
 
-    script(src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous")
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', 
-    integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    //- include chunks of content with block
+    block content
+      p This is here by default
+
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous")
+    script(src="/bootstrap/js/bootstrap.min.js")
+    script(src="/client/front-end.js")
